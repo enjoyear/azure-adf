@@ -1,0 +1,35 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "MapReduce1",
+				"type": "HDInsightMapReduce",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"jarFilePath": "demo-jars/wordcount/mr/chen-mr-jobs-1.0-SNAPSHOT.jar",
+					"className": "chen.guo.WordCount",
+					"jarLibs": [],
+					"jarLinkedService": {
+						"referenceName": "abs_jar",
+						"type": "LinkedServiceReference"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedService1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,37 @@
+{
+	"name": "linkedService1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HDInsightOnDemand",
+		"typeProperties": {
+			"clusterType": "hadoop",
+			"clusterSize": 1,
+			"timeToLive": "00:05:00",
+			"version": "3.6",
+			"hostSubscriptionId": "d3f099cb-50ca-4bc7-9b48-5df8ea28757f",
+			"clusterResourceGroup": "adftestdeletemeabc",
+			"servicePrincipalId": "fb5dda56-97d2-4635-af5d-650050c09526",
+			"tenant": "2445f142-5ffc-43aa-b7d2-fb14d30c8bd3",
+			"clusterNamePrefix": "",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "adf-runner-secret"
+			},
+			"additionalLinkedServiceNames": [],
+			"linkedServiceName": {
+				"referenceName": "abs_execution",
+				"type": "LinkedServiceReference"
+			},
+			"headNodeSize": "",
+			"dataNodeSize": "",
+			"zookeeperNodeSize": "",
+			"subnetName": "",
+			"virtualNetworkId": ""
+		}
+	}
+}

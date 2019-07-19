@@ -1,0 +1,13 @@
+{
+	"name": "AzureKeyVault1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [
+			"ChenTag"
+		],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://chen-vault.vault.azure.net/"
+		}
+	}
+}

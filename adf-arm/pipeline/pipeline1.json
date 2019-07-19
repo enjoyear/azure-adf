@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"url": "https://www.google.com",
+					"url": "http://www.google.com",
 					"method": "GET"
 				}
 			}
@@ -23,7 +23,7 @@
 		"parameters": {
 			"param1": {
 				"type": "string",
-				"defaultValue": "HiThere"
+				"defaultValue": "newVaule"
 			}
 		},
 		"annotations": []

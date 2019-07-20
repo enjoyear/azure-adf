@@ -15,15 +15,24 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"url": "http://www.google.com",
-					"method": "GET"
+					"url": {
+						"value": "https://prod-27.eastus.logic.azure.com:443/workflows/ca5cd92296ae44f7838969cadcbb1dd8/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=@{pipeline().parameters.sasToken}",
+						"type": "Expression"
+					},
+					"method": "POST",
+					"body": {
+						"pipeline_run_id": 345,
+						"status": "success",
+						"output1": "o1",
+						"output2": "o2"
+					}
 				}
 			}
 		],
 		"parameters": {
-			"param1": {
+			"sasToken": {
 				"type": "string",
-				"defaultValue": "newVaule"
+				"defaultValue": "theTokenHere"
 			}
 		},
 		"annotations": []

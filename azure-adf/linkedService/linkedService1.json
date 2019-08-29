@@ -1,6 +1,5 @@
 {
 	"name": "linkedService1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"description": "update description",
 		"annotations": [],
@@ -15,14 +14,6 @@
 			"servicePrincipalId": "fb5dda56-97d2-4635-af5d-650050c09526",
 			"tenant": "2445f142-5ffc-43aa-b7d2-fb14d30c8bd3",
 			"clusterNamePrefix": "",
-			"clusterPassword": {
-				"type": "SecureString",
-				"value": "**********"
-			},
-			"clusterSshPassword": {
-				"type": "SecureString",
-				"value": "**********"
-			},
 			"servicePrincipalKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
@@ -31,6 +22,7 @@
 				},
 				"secretName": "adf-runner-secret"
 			},
+			"additionalLinkedServiceNames": [],
 			"linkedServiceName": {
 				"referenceName": "abs_execution",
 				"type": "LinkedServiceReference"
@@ -39,7 +31,11 @@
 			"dataNodeSize": "",
 			"zookeeperNodeSize": "",
 			"subnetName": "",
-			"virtualNetworkId": ""
+			"virtualNetworkId": "",
+			"coreConfiguration": {
+				"k2.test": "secret-string"
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
